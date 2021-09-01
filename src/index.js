@@ -79,7 +79,7 @@ function main() {
     }
   });
 
-  const nextVersion = `${ major(version) }.${ minor(version) }.${ patch(version) }-${ preRelease }`;
+  const nextVersion = `${ major(version) }.${ minor(version) }.${ patch(version) }-${ preRelease.replace(/\W/g, '-') }`;
 
   log(`Bumping from ${ green(version) } to ${ green(nextVersion) }`);
 
